@@ -31,7 +31,9 @@ return [
     |
     */
 
-    'name' => 'FreeScout',
+    'name' => env('APP_NAME', 'Support'),
+    'logo_url' => env('APP_LOGO_URL', 'https://placehold.co/100x100'),
+    'logo_nav_url' => env('APP_LOGO_NAV_URL', '/img/logo-brand.svg'),
 
     /*
     |--------------------------------------------------------------------------
@@ -268,7 +270,7 @@ return [
     | The list should be in sync with /storage/app/public/uploads/.htaccess and nginx config.
     |-------------------------------------------------------------------------
     */
-    'viewable_attachments'    => env('APP_VIEWABLE_ATTACHMENTS') 
+    'viewable_attachments'    => env('APP_VIEWABLE_ATTACHMENTS')
                                 ? explode(',', env('APP_VIEWABLE_ATTACHMENTS'))
                                 : ['jpg', 'jpeg', 'jfif', 'pjpeg', 'pjp', 'apng', 'bmp', 'gif', 'ico', 'cur', 'png', 'tif', 'tiff', 'webp', 'pdf', 'txt', 'diff', 'patch', 'json', 'mp3', 'wav', 'ogg', 'wma'],
 
@@ -443,9 +445,9 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Use this option if you have many folders and you are experiencing
-    | performance issues. When this option is enabled sometimes it may take 
+    | performance issues. When this option is enabled sometimes it may take
     | several seconds for folders counters to update in the interface.
-    | 
+    |
     | https://github.com/freescout-helpdesk/freescout/pull/2982
     |-------------------------------------------------------------------------
     */
@@ -453,7 +455,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Experimental feature allowing to specify users who can see only conversations 
+    | Experimental feature allowing to specify users who can see only conversations
     | assigned to themselves. For such users only Mine folder shows actual number of conversations.
     | This option does not affect admin users.
     |
