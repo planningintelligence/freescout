@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {!! \Helper::cspMetaTag() !!}
 
-    <title>@if ($__env->yieldContent('title_full'))@yield('title_full') @elseif ($__env->yieldContent('title'))@yield('title') - {{ config('app.name', 'FreeScout') }} @else{{ config('app.name', 'FreeScout') }}@endif</title>
+    <title>@if ($__env->yieldContent('title_full'))@yield('title_full') @elseif ($__env->yieldContent('title'))@yield('title') - {{ config('app.name', 'Support') }} @else{{ config('app.name', 'Support') }}@endif</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
     <link rel="shortcut icon" type="image/x-icon" href="@filter('layout.favicon', URL::asset('favicon.ico'))">
@@ -252,7 +252,7 @@
             && empty(app('request')->x_embed) && empty($__env->yieldContent('no_footer')))
             <div class="footer">
                 @if (!\Eventy::filter('footer.text', ''))
-                    &copy; 2018-{{ date('Y') }} <a href="{{ config('app.freescout_url') }}" target="blank">{{ \Config::get('app.name') }}</a> — {{ __('Free open source help desk & shared mailbox') }}
+                  
                 @else
                     {!! \Eventy::filter('footer.text', '') !!}
                 @endif
